@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Profile Info Changer</title>
+
+    <style>
+        body {
+            background-color: blue;
+            font-family: Arial;
+        }
+
+        .card {
+            background-color: aliceblue;
+            width: 250px;
+            padding: 15px;
+            margin: 100px auto;
+            text-align: center;
+            border: 2px solid black;
+        }
+
+        #name {
+            color: darkblue;
+        }
+
+        #role {
+            color: green;
+        }
+
+        button {
+            background-color: blue;
+            color: white;
+            padding: 8px;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: darkblue;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="card">
+        <h2 id="name">Udaya</h2>
+        <p id="role">CSS Beginner</p>
+        <button onclick="changeRole()">Change Role</button>
+    </div>
+
+    <script>
+        function changeRole() {
+            let text = document.getElementById("role");
+            text.innerText = "Learning JavaScript Variables";
+        }
+    </script>
+
+</body>
+</html>
