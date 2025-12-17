@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Login</title>
+
+    <style>
+        body {
+            background-color: #e6f2ff;
+            font-family: Arial;
+        }
+
+        .card {
+            background-color: white;
+            width: 350px;
+            margin: 100px auto;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        h2 {
+            color: blue;
+            text-align: center;
+        }
+
+        label {
+            color: #333;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+        }
+
+        button {
+            width: 100%;
+            background-color: green;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .output {
+            margin-top: 15px;
+            color: purple;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="card">
+        <h2>Student Login</h2>
+
+        <form>
+            <label>Name</label>
+            <input type="text" id="name">
+
+            <label>Email</label>
+            <input type="email" id="email">
+
+            <label>Password</label>
+            <input type="password" id="password">
+
+            <label>Age</label>
+            <input type="number" id="age">
+
+            <button type="button" onclick="showData()">Login</button>
+        </form>
+
+        <div class="output" id="result"></div>
+    </div>
+
+    <script>
+        function showData() {
+            let name = document.getElementById("name").value;      // string
+            let email = document.getElementById("email").value;    // string
+            let password = document.getElementById("password").value; // string
+            let age = document.getElementById("age").value;        // number (string form)
+
+            document.getElementById("result").innerHTML =
+                "Name: " + name + "<br>" +
+                "Email: " + email + "<br>" +
+                "Age: " + age;
+        }
+    </script>
+
+</body>
+</html>
